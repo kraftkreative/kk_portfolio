@@ -34,7 +34,7 @@ body {
 /* HERO */
 .hero-honeycomb {
   height: 70vh;
-  background: url("https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/assets/hero-honeycomb.jpg")
+  background: url("https://github.com/kraftkreative/kk_portfolio/blob/main/hero-honeycomb.jpeg")
     center / cover no-repeat;
 }
 
@@ -157,3 +157,4 @@ body {
     text-align: left;
   }
 }
+
