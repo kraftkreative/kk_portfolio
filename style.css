@@ -192,6 +192,13 @@ font-size: 13px;
 letter-spacing: 2px;
 opacity: 0.6;
 }
+    .image-section-container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
+    }
+}
+
 
 
 
