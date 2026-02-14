@@ -30,9 +30,12 @@ display: block;
 }
 
 /* HERO */
-.hero-honeycomb {
-height: 70vh;
-background: url("assets/hero-honeycomb.jpeg") center/cover no-repeat;
+.hero-image, .portfolio-image {
+    width: 100vw;           /* Forces image to be 100% of the screen width */
+    height: 60vh;           /* Adjust this (e.g., 60% of screen height) */
+    object-fit: cover;      /* Crops the image to fill the area without stretching */
+    object-position: center; /* Keeps the focus in the middle */
+    margin-left: calc(-50vw + 50%); /* Centers the image if it's inside a restricted container */
 }
 
 /* INTRO */
@@ -189,5 +192,6 @@ font-size: 13px;
 letter-spacing: 2px;
 opacity: 0.6;
 }
+
 
 
