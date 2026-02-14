@@ -1,28 +1,206 @@
 * { box-sizing: border-box; }
 
 body {
-margin: 0;
-background: #0b0b0b;
-color: #fff;
-font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: #0b0b0b;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden; /* Prevents side-scrolling on mobile */
 }
 
 /* HEADER */
 .brand {
-position: fixed;
-top: 0;
-width: 100%;
-text-align: center;
-padding: 18px;
-background: rgba(0,0,0,0.8);
-letter-spacing: 3px;
-z-index: 1000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    padding: 18px;
+    background: rgba(0,0,0,0.8);
+    letter-spacing: 3px;
+    z-index: 1000;
 }
 
 /* PAGES */
 .page {
-display: none;
-padding-top: 80px;
+    display: none;
+    padding-top: 80px;
+}
+
+.page.active {
+    display: block;
+}
+
+/* HERO & CTA IMAGES - Full Width Fix */
+.hero-image, .portfolio-image, .cta-section img {
+    width: 100vw;           
+    height: 65vh;           /* Increased height for better look */
+    object-fit: cover;      
+    object-position: center; 
+    margin-left: 50%;
+    transform: translateX(-50%); /* Better way to center full-width images */
+    display: block;
+}
+
+/* INTRO / ABOUT SECTION */
+.intro-section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.profile-image-class, img[src*="me.jpeg"] { 
+    width: 100%;          
+    max-width: 400px;      
+    height: auto;        
+    display: block;        
+    margin: 20px auto;       
+    object-fit: cover;
+    border-radius: 8px;     
+}
+
+/* CTA BUTTON */
+.cta-section {
+    position: relative;
+    text-align: center;
+}
+
+.portfolio-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 18px 50px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    letter-spacing: 3px;
+    white-space: nowrap;
+}
+
+/* PORTFOLIO LAYOUT */
+.portfolio-layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    padding: 60px;
+    gap: 40px;
+}
+
+.sidebar {
+    text-align: right;
+}
+
+#categories {
+    list-style: none;
+    padding: 0;
+}
+
+#categories li {
+    cursor: pointer;
+    margin: 10px 0;
+    transition: 0.3s;
+    opacity: 0.6;
+}
+
+#categories li.active {
+    font-weight: bold;
+    opacity: 1;
+}
+
+/* GALLERY & BUTTON FIX */
+.gallery {
+    position: relative;
+    width: 100%;
+    min-height: 300px; /* Keeps space open while image loads */
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.gallery button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    border: none;
+    font-size: 32px;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 10; /* Ensures buttons are above image */
+}
+
+#prev { left: 0; }
+#next { right: 0; }
+
+/* NAVIGATION */
+.home-arrow {
+    position: fixed;
+    top: 95px;
+    left: 40px;
+    font-size: 28px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.3s;
+    z-index: 100;
+}
+
+/* FOOTER / CONTACT */
+.contact-social {
+    padding: 40px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.contact-social a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin: 10px 15px;
+    transition: 0.3s;
+}
+
+/* MOBILE RESPONSIVE FIXES */
+@media screen and (max-width: 768px) {
+    .portfolio-layout {
+        grid-template-columns: 1fr; /* Stacks sidebar and gallery */
+        padding: 20px;
+    }
+
+    .sidebar {
+        text-align: center;
+        order: 2; /* Moves text below the gallery */
+    }
+
+    .gallery {
+        order: 1;
+        margin-bottom: 20px;
+    }
+
+    .gallery button {
+        padding: 10px;
+        font-size: 24px;
+    }
+
+    .home-arrow {
+        left: 20px;
+        top: 85px;
+    }
+
+    .brand {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
 }
 
 .page.active {
@@ -198,6 +376,7 @@ opacity: 0.6;
         overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
     }
 }
+
 
 
 
