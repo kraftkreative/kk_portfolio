@@ -175,3 +175,79 @@ font-size: 13px;
 letter-spacing: 2px;
 opacity: 0.6;
 }
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  /* INTRO STACK */
+  .intro {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .intro-image img {
+    max-width: 280px;
+    margin: auto;
+  }
+
+  /* PORTFOLIO STACK */
+  .portfolio-layout {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  /* GALLERY HEIGHT SMALLER */
+  .gallery {
+    height: auto;
+  }
+
+  .gallery img {
+    max-width: 100%;
+    max-height: 70vh;
+  }
+
+  /* SIDEBAR CENTER */
+  .sidebar {
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  #categories li {
+    font-size: 18px;
+    margin: 12px 0;
+  }
+
+  /* CONTACT CENTER */
+  .contact-section {
+    margin-top: 40px;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+
+  /* HEADER SMALLER */
+  .brand {
+    font-size: 14px;
+    padding: 14px;
+  }
+
+  /* BACK BUTTON POSITION */
+  .home-arrow {
+    top: 70px;
+    left: 20px;
+  }
+
+  /* PORTFOLIO BUTTON SMALLER */
+  .portfolio-btn {
+    padding: 14px 40px;
+    letter-spacing: 2px;
+    font-size: 14px;
+  }
+
+}
+
+
