@@ -107,9 +107,9 @@ text-align: center;
 }
 
 .gallery img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
+width: 100%;
+max-height: 80vh;
+object-fit: contain;
 }
 
 
@@ -205,10 +205,12 @@ opacity: 0.6;
     height: auto;
   }
 
-  .gallery img {
-    max-width: 100%;
-    max-height: 70vh;
-  }
+ .gallery img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 
   /* SIDEBAR CENTER */
   .sidebar {
@@ -250,6 +252,7 @@ opacity: 0.6;
   }
 
 }
+
 
 
 
