@@ -36,17 +36,30 @@ background: url("assets/hero-honeycomb.jpeg") center/cover no-repeat;
 }
 
 /* INTRO */
-.intro {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 40px;
-padding: 80px 60px;
+.profile-image-class { 
+    width: 100%;          
+    max-width: 400px;      
+    height: auto;        
+    display: block;        
+    margin: 0 auto;       
+    object-fit: cover;     
 }
 
-.intro-image img {
-  width: 100%;
-  height: auto;
-  display: block;
+img[src*="me.jpeg"] {
+    flex-shrink: 0;        
+    min-width: 250px;      
+}
+
+@media screen and (max-width: 768px) {
+    .container-around-image-and-text {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .profile-image-class {
+        width: 80%; /* Makes the image larger and visible on mobile */
+        margin-bottom: 20px;
+    }
 }
 
 /* CTA */
@@ -176,4 +189,5 @@ font-size: 13px;
 letter-spacing: 2px;
 opacity: 0.6;
 }
+
 
